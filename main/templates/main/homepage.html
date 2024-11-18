@@ -1,0 +1,33 @@
+<!doctype html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "css/style.css"%}">
+    <title>Home</title>
+</head>
+<body>
+ <header>
+        <div class="container">
+            <h1>Welcome to St.Scholastica </h1>
+            <p>Your trusted Results Management System</p>
+            <div class="login-dropdown">
+                <a href="{% url 'login' %}"><button id="loginButton">Login </button></a>
+</div>
+
+        </div>
+    </header>
+    <main>
+        <section class="about-school">
+            <h2>About Our School</h2>
+            <p>Welcome to St.Scholastica, a place of excellence in education. We strive to offer the best learning environment for our students with dedicated staff and a focus on holistic development.</p>
+            <p>Mission Statement: [Insert Mission Statement]</p>
+            <p>News & Announcements: [Insert Recent News and Announcements]</p>
+        </section>
+    </main>
+    <script src="{% static "js/script.js"%}"></script>
+</body>
+</html>

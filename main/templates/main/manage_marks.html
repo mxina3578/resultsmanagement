@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Manage Marks</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add/Edit Marks</button>
+</form>
+<h2>Existing Marks Records</h2>
+<ul>
+    {% for marks in marks_list %}
+        <li>{{ marks.student.full_name }} - Total Marks: {{ marks.total_marks }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

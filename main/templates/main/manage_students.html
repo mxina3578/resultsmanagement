@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Manage Students</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Student</button>
+</form>
+<h2>Existing Students</h2>
+<ul>
+    {% for student in students %}
+        <li>{{ student.full_name }} (ID: {{ student.student_id }})</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

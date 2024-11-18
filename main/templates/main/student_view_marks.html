@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Your Marks</h1>
+<ul>
+    {% for mark in marks %}
+        <li>
+            Math: {{ mark.subject_math }},
+            English: {{ mark.subject_english }},
+            Kiswahili: {{ mark.subject_kiswahili }},
+            Total: {{ mark.total_marks }},
+            Remarks: {{ mark.remarks }}
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
